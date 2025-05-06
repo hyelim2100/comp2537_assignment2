@@ -180,11 +180,11 @@ app.get('/members', (req, res) => {
         res.redirect('/');
         return;
     }
-    var images = ['cat.gif', 'fluffy.gif', 'socks.gif'];
+    var images = ['dog1.jpg', 'dog2.jpg', 'dog3.jpg'];
     var randomImage = images[Math.floor(Math.random() * images.length)];
     res.send(`
         <h1>Hello, ${req.session.name}.</h1>
-        <img src="/${randomImage}" alt="Random Cat" width="300" height="200"><br>
+        <img src="/${randomImage}" alt="Random dog" width="300" height="200"><br>
         <button onclick="location.href='/logout'">Sign out</button>
         `);
 });
